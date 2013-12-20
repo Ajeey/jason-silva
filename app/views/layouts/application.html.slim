@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    title Jason Silva
+    meta charset="utf-8"
+
+    = yield :pre_stylesheets
+    = stylesheet_link_tag 'application', media: 'all'
+    = yield :post_stylesheets
+
+    = csrf_meta_tags
+
+  body
+    = render partial: "/layouts/header"
+    .container-fluid#content
+      = yield
+
+    = yield :pre_javascripts
+    = javascript_include_tag 'application'
+    = yield :post_javascripts
