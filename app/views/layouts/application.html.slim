@@ -14,7 +14,8 @@ html
     = render partial: "/layouts/header"
     .container-fluid#content
       = yield
-
+    #footer
+      = render partial: "/layouts/footer"
     = yield :pre_javascripts
     = javascript_include_tag 'application'
     = yield :post_javascripts
