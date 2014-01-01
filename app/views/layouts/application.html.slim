@@ -12,8 +12,9 @@ html
 
   body
     = render partial: "/layouts/header"
-    .container-fluid#content
-      = yield
+    .wrapper
+      .container-fluid#content
+        = yield
     #footer
       = render partial: "/layouts/footer"
     = yield :pre_javascripts
