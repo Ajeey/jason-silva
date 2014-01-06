@@ -18,7 +18,7 @@ blockquote {
   background: #f9f9f9;
   //border-left: 6px solid #ccc;
   // border-left: 6px solid #ff0800;
-  border-left: 6px solid #f79321;
+  border-left: 6px solid #b94a48;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -26,7 +26,7 @@ blockquote {
 
 blockquote:before {
   content:"\201C";
-  content: open-quote;
+  //content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
@@ -37,8 +37,10 @@ blockquote.pull-right {
   float: right;
   padding-right: 15px;
   padding-left: 0;
-  border-right: 6px solid #ff0800;
+  border-right: 6px solid #b94a48;
   border-left: 0;
+  margin-left: 20px;
+
 }
 
 blockquote p {
@@ -52,10 +54,11 @@ body {
 
 ul {
   li {
+
     a:hover {
       border-top: 0.5px solid #fb0;
       background-color: #ffcc40 !important;
-      color: #fff;
+      color: #fff !important;
 
       -webkit-transition: 0.25s linear;
       -moz-transition: 0.25s linear;
@@ -64,6 +67,8 @@ ul {
     }
   }
 }
+
+.pagination ul > .active > a, .pagination ul > .active > span {color: red;}
 
 .video-container {
     position: relative;
@@ -95,4 +100,38 @@ ul {
     border-color: transparent;
     color: white;
   }
+}
+
+.navbar {
+  .brand {
+    color: white;
+    text-shadow: none;
+  }
+}
+
+.navbar {
+  .nav {
+    li {
+      a {
+        color: white;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+
+hr {
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid white;
+}
+
+p::selection {
+  background-color: #af1b5a;
+  color: white;
+}
+
+p::-moz-selection {
+  background-color: #af1b5a;
+  color: white;
 }
