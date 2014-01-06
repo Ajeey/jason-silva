@@ -1,0 +1,40 @@
+.row-fluid
+  .span6.offset3
+    .pagination.pagination-large.text-center
+      ul
+        - if (current_page?(action: 'index'))
+          li.active = link_to '1', root_path
+        - else
+          li = link_to '1', root_path
+
+        - if (current_page?(action: 'second'))
+          li.active = link_to '2', second_home_path
+        - else
+          li = link_to '2', second_home_path
+
+        - if (current_page?(action: 'third'))
+          li.active = link_to '3', third_home_path
+        - else
+          li = link_to '3', third_home_path
+
+        - if (current_page?(action: 'fourth'))
+          li.active = link_to '4', fourth_home_path
+        - else
+          li = link_to '4', fourth_home_path
+
+        - if (current_page?(action: 'fifth'))
+          li.active = link_to '5', fifth_home_path
+        - else
+          li = link_to '5', fifth_home_path
+
+        - if (current_page?(action: 'six'))
+          li.active = link_to '6', six_home_path
+        - else
+          li = link_to '6', six_home_path
+
+        - if (current_page?(action: 'seven'))
+          li.active = link_to '7', seven_home_path
+        - else
+          li = link_to '7', seven_home_path
+
+        //li = link_to '8', eight_home_path
